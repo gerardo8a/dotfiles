@@ -1,0 +1,16 @@
+[user]
+    name = Gerardo Porras
+    email = gporras@yahoo-inc.com
+[color]
+    ui = true
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    lol = log --oneline --graph --all --decorate
+    logg = log --graph --decorate --oneline --abbrev-commit --all
+[gitreview]
+    username = gerardo8a

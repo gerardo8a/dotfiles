@@ -1,0 +1,59 @@
+startup_message off
+hardstatus on
+
+hardstatus alwayslastline
+hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+
+#hardstatus alwayslastline
+#hardstatus alwayslastline "%{= kw}%-w%{= BW}%n %t%{-}%+w"
+#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %0c"
+
+#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+#hardstatus string "%{= KW}%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+#caption always "%{= KW}%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< %= %0c"
+vbell off
+#vbellwait 1
+#Command key defualt is CTR-A abajo se cambia
+#escape ^oo
+defscrollback 100000
+compacthist on
+#bindkey -k F1 prev
+#bindkey -k F2 next
+
+
+#term screen-256color
+
+#caption always "%{=b}%?%F%:%45=%n*%f %t%?%?%F%{r}%:%{s kk}%?%H%?%F%{-}%? %L=%-Lw%45L>%?%F%{g}%?%n*%f %t%?%F%{-}%?%+Lw%-17= %?%F%{y}%?%c %d.%m.%Y%?"
+
+# visual bell
+#vbell_msg "   Google sucks !!! "
+
+
+
+# Set a big scrolling buffer
+# Set the caption on the bottom line
+
+# Set default terminal and character set to utf-8
+   #defutf8 on
+   #defencoding UTF-8
+# Default screens
+#screen -t pg_translate
+altscreen on
+
+# Ctrl-Tab
+bindkey "^[[27;5;9~" next
+
+# Ctrl-Shift-Tab
+bindkey "^[[27;6;9~" prev
+
+#termcapinfo xterm-color|xterm|xterms|xs|rxvt ti@:te@
+
+# Copying to the Mac Clipboard
+# as seen here: http://blog.samsarin.com/2007/03/11/gnu-screen-working-with-the-scrollback-buffer/
+bind b eval "writebuf" "exec sh -c 'pbcopy < /tmp/screen-exchange'"
+
+
+# not sure if this is iseful for me
+# as seen here: http://blog.samsarin.com/2007/03/11/gnu-screen-working-with-the-scrollback-buffer/
+termcapinfo xterm*|rxvt* ti@:te@
